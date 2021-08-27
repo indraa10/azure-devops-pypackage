@@ -30,9 +30,6 @@ steps:
 - task: CopyFiles@2
   inputs:
     targetFolder: $(Build.ArtifactStagingDirectory)
-- task: TwineAuthenticate@1
-  inputs:
-    artifactFeed: 'Custom Python Package/devopsartifactfeed'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
